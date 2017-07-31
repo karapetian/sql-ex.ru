@@ -1,0 +1,12 @@
+	create table pc(
+code int NOT NULL Primary Key
+model varchar(50) NOT NULL 
+speed smallint NOT NULL
+ram smallint NOT NULL
+hd real NOT NULL
+cd varchar(10) NOT NULL
+price money
+)
+
+
+
