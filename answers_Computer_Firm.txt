@@ -1,0 +1,54 @@
+N1
+Select model, speed, hd
+from PC 
+WHERE price <500
+
+
+N2
+Select DISTINCT maker from Product
+where type = 'Printer'
+
+N3
+Select model, ram, screen
+from Laptop
+where price>1000
+
+N4
+Select * from Printer
+where color = 'y'
+
+N5
+Select model, speed, hd
+from PC
+where (cd='12x' or cd='24x') and price<600
+
+N6
+Select DISTINCT maker, speed
+from Product join Laptop
+on product.model=laptop.model and Laptop.hd>=10
+
+N7
+Select DISTINCT PC.model, PC.price
+From PC
+Join Product on Product.model=PC.model and Product.maker='B'
+UNION
+Select DISTINCT Laptop.model, Laptop.price
+From Laptop
+Join Product on Product.model=Laptop.model and Product.maker='B'
+UNION
+Select DISTINCT Printer.model, Printer.price
+From Printer
+Join Product on Product.model=Printer.model and Product.maker='B'
+
+N8
+
+
+N9
+Select distinct Maker from product
+join pc on pc.model=product.model and pc.speed>=450
+
+N10
+Select model, price 
+from printer
+where price=(SELECT max(price) 
+ FROM printer)
